@@ -1,0 +1,3 @@
+# SZA2
+
+25.taldeak eginiko web aplikzaioa. Denborarekin betetzen joango gara...
