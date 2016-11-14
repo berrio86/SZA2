@@ -4,27 +4,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Web kamera</title>
 
 </head>
 
 <body>
 	<h1>Logeatu zaitez</h1>
-	<form id="logeatu" name="logeatu" method="POST" action="index.php" enctype="multipart/form-data">
+	<form id="logeatu" method="post" action="index.php" enctype="multipart/form-data">
 		<div class="login-form">
   			<h3>Posta-elektronikoa:</h3> 
-  			<input type="text" name="eposta" title="Sartu zure emaila." placeholder="E-mail"><br>
+  			<input type="text" name="eposta" title="Sartu zure emaila."/><br/>
 			<h3>Pasahitza:</h3>
- 			<input type="password" name="pasahitza" title="Sartu zure pasahitza." placeholder="Password"><br><br>
-			<input type="submit" class="login-button" name="button" value="Bidali">
+ 			<input type="password" name="pasahitza" title="Sartu zure pasahitza."/><br/><br/>
+			<input type="submit" class="login-button" name="button" value="Bidali"/>
 			<a class="no-access" href="pasahitzaBerreskuratu.php">Pasahitza ahaztu al duzu??</a>
 			</div>
 	</form>
-
-</body>
-</html>
-<?php 
+	<?php 
 
 if (isset($_POST['eposta'])){
 	include 'dbkonexioak/dbOpen.php';
@@ -67,3 +64,7 @@ if (isset($_POST['eposta'])){
 	include 'dbkonexioak/dbClose.php';
 }	
 ?>  
+
+
+</body>
+</html>
