@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bisitak SYSTEM "bisita_liburua.dtd">
+<erabiltzaileak>
+	<erabiltzailea>
+		<eposta>jartomari@hotmail.com</eposta>
+		<izena>JartoMari</izena>
+		<pasahitza>123456</pasahitza>
+	</erabiltzailea>
+	<erabiltzailea>
+		<eposta>julenmg_12@hotmail.com</eposta>
+		<izena>Julen</izena>
+		<pasahitza>123456</pasahitza>
+	</erabiltzailea>
+</erabiltzaileak>

@@ -1,0 +1,6 @@
+<!ELEMENT erabiltzaileak (erabiltzailea)*>
+<!ELEMENT erabiltzailea (eposta, izena, pasahitza)>
+<!ELEMENT eposta (#PCDATA)>
+<!ELEMENT izena (#PCDATA)>
+<!ELEMENT pasahitza (#PCDATA)>
+
