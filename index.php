@@ -6,21 +6,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Web kamera</title>
+<link rel="stylesheet" type="text/css" href="css/login.css">	
 
 </head>
 
 <body>
-	<h1>Logeatu zaitez</h1>
+<div class='login'>
+	<div class="login-header">
+		<h1>Logeatu zaitez</h1>
+	</div>
+	
 	<form id="logeatu" method="post" action="index.php" enctype="multipart/form-data">
 		<div class="login-form">
   			<h3>Posta-elektronikoa:</h3> 
   			<input type="text" name="eposta" title="Sartu zure emaila."/><br/>
 			<h3>Pasahitza:</h3>
  			<input type="password" name="pasahitza" title="Sartu zure pasahitza."/><br/><br/>
-			<input type="submit" class="login-button" name="button" value="Bidali"/>
+			<input type="submit" class="login-button" name="button" value="Sartu"/>
 			<a class="no-access" href="pasahitzaBerreskuratu.php">Pasahitza ahaztu al duzu??</a>
 			</div>
 	</form>
+	<img src="irudiak/88568.gif" alt="kamera gif" class="image-kamera">
+</div>
 	<?php 
 
 if (isset($_POST['eposta'])){
