@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Web kamera</title>
-<link rel="stylesheet" type="text/css" href="css/login.css">	
+<link rel="stylesheet" type="text/css" href="css/login.css"/>	
 
 </head>
 
@@ -26,7 +26,7 @@
 			<a class="no-access" href="pasahitzaBerreskuratu.php">Pasahitza ahaztu al duzu??</a>
 			</div>
 	</form>
-	<img src="irudiak/88568.gif" alt="kamera gif" class="image-kamera">
+	<img src="irudiak/88568.gif" alt="kamera gif" class="image-kamera"/>
 </div>
 	<?php 
 
