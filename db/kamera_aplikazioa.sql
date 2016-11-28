@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 14, 2016 at 10:32 
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Servidor: localhost
+-- Tiempo de generación: 28-11-2016 a las 19:47:14
+-- Versión del servidor: 5.6.26
+-- Versión de PHP: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,44 +17,77 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kamera_aplikazioa`
+-- Base de datos: `kamera_aplikazioa`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Erabiltzailea`
+-- Estructura de tabla para la tabla `Administratzailea`
 --
 
-CREATE TABLE `Erabiltzailea` (
+CREATE TABLE IF NOT EXISTS `Administratzailea` (
   `Emaila` varchar(50) NOT NULL,
   `Izena` varchar(50) NOT NULL,
   `Pasahitza` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `Administratzailea`
+--
+
+INSERT INTO `Administratzailea` (`Emaila`, `Izena`, `Pasahitza`) VALUES
+('julen12@hotmail.com', 'Julen', '123456');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Kamera`
+-- Estructura de tabla para la tabla `Erabiltzailea`
 --
 
-CREATE TABLE `Kamera` (
+CREATE TABLE IF NOT EXISTS `Erabiltzailea` (
+  `Emaila` varchar(50) NOT NULL,
+  `Izena` varchar(50) NOT NULL,
+  `Pasahitza` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `Erabiltzailea`
+--
+
+INSERT INTO `Erabiltzailea` (`Emaila`, `Izena`, `Pasahitza`) VALUES
+('iberriochoa001@ikasle.ehu.eus', 'Iñaki Berriotxoa', '123456'),
+('julenmg_12@hotmail.com', 'Julen Merino', '123456');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Kamera`
+--
+
+CREATE TABLE IF NOT EXISTS `Kamera` (
   `IP` varchar(15) NOT NULL,
   `Emaila` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `Erabiltzailea`
+-- Indices de la tabla `Administratzailea`
+--
+ALTER TABLE `Administratzailea`
+  ADD PRIMARY KEY (`Emaila`);
+
+--
+-- Indices de la tabla `Erabiltzailea`
 --
 ALTER TABLE `Erabiltzailea`
   ADD PRIMARY KEY (`Emaila`);
 
 --
--- Indexes for table `Kamera`
+-- Indices de la tabla `Kamera`
 --
 ALTER TABLE `Kamera`
   ADD PRIMARY KEY (`IP`);
