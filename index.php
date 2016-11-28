@@ -67,13 +67,18 @@ if (isset($_POST['eposta'])){
 		}else{
 			//konexioaren emaila ezarri
 			$_SESSION['eposta']= $eposta;
+			$_SESSION['erabiltzaileMota']= 'user';
+			header("Location:hasiera.php");
+	    	exit;
 		}
 	}else{
 		//konexioaren emaila ezarri administratzaile bezala
-		$_SESSION['admin']= $eposta;
+		$_SESSION['eposta']= $eposta;
+		$_SESSION['erabiltzaileMota']= 'admin';
+		header("Location:hasiera.php");
+    		exit;
 	}
-	header("Location:hasiera.php");
-    	exit;
+	
 	include 'dbkonexioak/dbClose.php';
 }	
 ?>  
