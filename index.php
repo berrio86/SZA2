@@ -39,44 +39,36 @@ if (isset($_POST['eposta'])){
 			$eposta= $_POST['eposta'];
 			$pass= $_POST['pasahitza'];
 	}
-	//errore mezuak sortu
-	/*$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		
+	$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Email='$eposta' AND Pasahitza='$pass'";
+	$emaitza = $db->query($erabiltzaileak); 
+	$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
+	
+	if(empty($lerroa)){
+		//errore mezuak sortu
+		/*$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 				<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-			<div class='error-page'>
+				<div class='error-page'>
+				<div class='try-again'>";*/
+		$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+				<div class='error-page'>
 				<div class='try-again'>";
 	
-	$bukaera="Errorea: Saiatu berriro?
+		$bukaera="Errorea: Saiatu berriro?
 				</div>
 			</div>
-			<script src='js/signIn.js'></script>";*/
-	
-	
-	
-	$administratzaileak = "SELECT * FROM Administratzailea WHERE Emaila='$eposta' AND Pasahitza=$pass";
-	$emaitza = $db->query($administratzaileak); 
-	
-	
-	if(empty($emaitza)){
-		//begiratu pasahitza bat datorren ala ez
-		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Emaila='$eposta' AND Pasahitza=$pass";
-		$emaitza = $db->query($erabiltzaileak); 
-		//$user = $emaitza->fetch_array(MYSQLI_BOTH);
-		if(empty($emaitza)){
-			//guest ezarri erabiltzaile bezala
-			echo ("Erabiltzaile edo pasahitz okerra"); 
-		}else{
-			//konexioaren emaila ezarri
-			$_SESSION['eposta']= $eposta;
-			$_SESSION['erabiltzaileMota']= 'user';
-			header("Location:hasiera.php");
-	    	exit;
-		}
+			<script src='js/login.js'></script>";
+		
+		echo($hasiera."Pasahitza edo erabiltzaile izen okerra.</br>".$bukaera);
+		//echo"Pasahitza edo erabiltzaile izen okerra";
 	}else{
-		//konexioaren emaila ezarri administratzaile bezala
-		$_SESSION['eposta']= $eposta;
-		$_SESSION['erabiltzaileMota']= 'admin';
+		$izena=$lerroa['Izena'];
+		$mota=$lerroa['Mota'];
+		
+		$_SESSION['izena']=$izena;
+		$_SESSION['eposta']=$eposta;
+		$_SESSION['erabiltzaileMota']=$mota;
 		header("Location:hasiera.php");
-    		exit;
 	}
 	
 	include 'dbkonexioak/dbClose.php';

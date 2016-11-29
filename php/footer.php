@@ -3,7 +3,7 @@
 
 		
 		<a target="_blank" href='https://github.com/berrio86/SZA2'><img src="irudiak/github-icon.png"></a><br/>
-		<a target="_blank" href="https://www.linkedin.com/in/jon-arzelus-rodriguez-63306b128">Julen Merino</a> eta <a target="_blank" href='inaki.html'>Iñaki Berriotxoa</a>
+		<a target="_blank" href="hasiera.php">Julen Merino</a> eta <a target="_blank" href="hasiera.php">Iñaki Berriotxoa</a>
 	</footer>
 </div>
 </body>
