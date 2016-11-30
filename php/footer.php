@@ -3,7 +3,7 @@
 
 		
 		<a target="_blank" href='https://github.com/berrio86/SZA2'><img src="irudiak/github-icon.png"></a><br/>
-		<a target="_blank" href="hasiera.php">Julen Merino</a> eta <a target="_blank" href="hasiera.php">Iñaki Berriotxoa</a>
+		<a target="_blank" href="https://github.com/julenmg">Julen Merino</a> eta <a target="_blank" href="https://github.com/berrio86">Iñaki Berriotxoa</a>
 	</footer>
 </div>
 </body>
