@@ -1,1 +1,155 @@
-lskdfhalskjfh
+@charset "utf-8";
+
+/*orokorrak*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	font: 16px Georgia, serif;
+}
+
+b{font: 16px Georgia, serif;}
+
+a{ text-decoration: none; }
+
+#page-wrap				{margin: 0 auto; color: white;}
+#page-wrap >.main 	{ 
+  padding: 0;
+  margin-bottom: 0; 
+  color: black;
+  overflow-y: auto;
+}
+
+/*goiburua*/
+
+header {
+  position:absolute;
+  height:14%;
+  width:100%;
+  background: linear-gradient(#000000, #d9d9d9); /* Standard syntax */
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+header img.botoia { 
+  height: 90%;
+  float:right;
+  opacity:0.5;
+  margin:auto;
+}
+
+.logo { 
+  height:90%;
+  max-width:50%;
+  position:relative;
+  margin:auto;
+}
+
+.datuak{
+	color:white;
+	float:left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+header img.botoia:hover {
+  opacity:1.0;
+}
+
+/*gorputza*/
+
+section > div				{padding: 20px;}
+
+
+section {
+  position: absolute;
+  right:0px;
+  top:14%;
+  width: 84%; 
+  height: 78%;
+  z-index: 1;
+  overflow-y: auto;
+  background: #FFF; 
+  text-align: center;
+  vertical-align: middle;
+  border: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius:10px;
+}
+
+/*nabigazio menua*/
+
+nav	{
+  position:absolute;
+  top:14%;
+  left:0px;
+  width: 16%; 
+  height: 78%;
+  z-index: 10;
+  background: linear-gradient(#d9d9d9, #ffffff);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+nav span:hover {
+    color: black;
+    background-color: grey;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid black;
+  float:right;
+}
+
+nav span {
+  margin: 0px 10px 0px 0px;
+  width: 100%;
+  display: inline-block;
+  font-size:22px;
+  text-decoration: none;
+  text-align:left;
+  color:black;
+  border: none;
+  border-width: 1px;
+  background: #ffffff;
+  padding:4px;
+}
+
+
+/*footerra*/
+
+footer {
+  clear: both; 
+  display: block;
+  position: absolute;
+  width:100%;
+  height:8%;
+  bottom: 0px;	
+  background: linear-gradient(#ffffff, #d9d9d9);
+  text-align: center;
+  vertical-align: middle;
+}
+
+footer img {
+  height:80%;
+  opacity:0.5;
+  padding-right:16px;
+  float:right;
+  margin: 5px 5px 5px 5px;
+}
+
+footer img:hover {
+   opacity: 1.0;
+}
