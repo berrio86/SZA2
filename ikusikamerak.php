@@ -2,10 +2,7 @@
 session_start();
 include 'php/header.php';
 //horrela jarrita dago javascript funtzioak sartu behar badira head atalean.
-echo('<script type="text/javascript" >
-function erabEzabatu()
-</script>
-</head>
+echo('</head>
 		<body>');
 include 'php/navigation.php';
 ?>
@@ -17,14 +14,13 @@ include 'php/navigation.php';
 
 include "dbkonexioak/dbOpen.php";
 
-		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Mota='Erabiltzailea'" ;
-		$result = $db->query($erabiltzaileak);
-		echo '<table id ="table" border=1><tr><th> Email </th><th> Izena </th></tr>';
+		$kamerak = "SELECT * FROM Kamera" ;
+		$result = $db->query($kamerak);
+		echo '<table border=1><tr><th> IP </th><th> Emaila </th></tr>';
 		while( $row = $result->fetch_array(MYSQLI_BOTH)) {
-			echo '<tr><td>'. $row['Email'].'</td> <td>'.$row['Izena'].'</td></tr>';
+			echo '<tr><td>'. $row['IP'].'</td> <td>'.$row['Emaila'].'</td></tr>';
 		}
 		echo '</table>';
-		echo'<input type="button" name="OK" class="ok" value="OK"/>';
 
 		include "dbkonexioak/dbClose.php";
 	?>

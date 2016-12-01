@@ -10,11 +10,11 @@ include 'php/navigation.php';
 		
 	
 	<div>
-	<form id="aukeratu" method="post" action="index.php" enctype="multipart/form-data"
-	<button id="b1" value ="bai">Try it</button>
-	<?php
-	include 'ikusierabiltzaileak.php';
-	?>
+	<form id="aukeratu" method="post" enctype="multipart/form-data">
+		<input type="button" id="b1" onclick="location.href='ikusierabiltzaileak.php';" value="erabiltzailea ezabatu"/>
+		<input type="button" id="b2" onclick="location.href='ikusikamerak.php';" value="kamera ezabatu"/>
+	</form>
+	
 	Xml deskargatzeko aukera emango da
 	</div>
 
