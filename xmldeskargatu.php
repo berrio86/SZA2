@@ -10,6 +10,11 @@ include 'php/navigation.php';
 		
 	
 	<div>
+	<form id="aukeratu" method="post" action="index.php" enctype="multipart/form-data"
+	<button id="b1" value ="bai">Try it</button>
+	<?php
+	include 'ikusierabiltzaileak.php';
+	?>
 	Xml deskargatzeko aukera emango da
 	</div>
 
