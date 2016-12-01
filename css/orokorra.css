@@ -126,6 +126,12 @@ nav span {
   background: #ffffff;
   padding:4px;
 }
+td {border: 1px #DDD solid; padding: 5px; cursor: pointer;}
+
+.selected {
+    background-color: brown;
+    color: #FFF;
+}
 
 
 /*footerra*/
