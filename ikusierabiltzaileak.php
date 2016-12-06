@@ -35,7 +35,21 @@ include "dbkonexioak/dbOpen.php";
 			echo '<tr><td>'. $row['Email'].'</td> <td>'.$row['Izena'].'</td></tr>';
 		}
 		echo '</table>';
-		echo'<input type="button" name="OK" class="ok" value="OK"/>';
+		echo '<form id="ezabatu" method="post" action="ikusierabiltzaileak.php" enctype="multipart/form-data">';
+		echo '<div>';
+  			echo '<h3>Sartu borratu nahi dezun erabiltzailearen Posta-elektronikoa:</h3>';
+  			echo '<input type="text" name="eposta"/><br/>';
+			echo '</div>';
+		echo '</form>';
+
+
+		if (isset($_POST['eposta'])){
+			$eposta= $_POST['eposta'];
+			$erabiltzaileaborratu = "DELETE FROM Erabiltzailea WHERE Email='$eposta'" ;
+			$result = $db->query($erabiltzaileaborratu);
+			header("Location:xmldeskargatu.php");
+		}
+	
 
 		include "dbkonexioak/dbClose.php";
 	?>
