@@ -1,6 +1,6 @@
 <div id='page-wrap'>
 	<header>
-		<a href="hasiera.php"><img class="logo" src="irudiak/quiz-logo.png" alt="Aplikazio logo" /></a>	
+		<a href="hasiera.php"><img class="logo" src="irudiak/logo.png" alt="Aplikazio logo" /></a>	
 		<a href="logout.php"><img title="Saioa amaitu" class="botoia"  src="irudiak/logout-icon.png" alt="Log out botoia"/></a>
 		<?php
 			if(empty($_SESSION['izena'])||empty($_SESSION['eposta'])||empty($_SESSION['erabiltzaileMota'])){
