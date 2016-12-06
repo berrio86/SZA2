@@ -23,6 +23,7 @@
 			<h3>Pasahitza:</h3>
  			<input type="password" name="pasahitza" title="Sartu zure pasahitza."/><br/><br/>
 			<input type="submit" class="login-button" name="button" value="Sartu"/>
+			<a class="no-access" href="erregistratu.php">Erregistratu</a><br/>
 			<a class="no-access" href="pasahitzaBerreskuratu.php">Pasahitza ahaztu al duzu??</a>
 			</div>
 	</form>
