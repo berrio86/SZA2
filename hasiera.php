@@ -10,7 +10,7 @@ include 'php/navigation.php';
 		
 	
 	<div>
-	Hau da aplikazioaren hasiera. Ondoren joango gara elementuak gehitzen.
+	Ongi etorri web kameren aplikaziora!!
 	</div>
 
 		

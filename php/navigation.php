@@ -8,12 +8,13 @@
     </header>
 	<nav>
 	<?php
+		echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Hasiera<div class="arrow-right"></div></span></a>');
 	if($_SESSION['erabiltzaileMota'] == 'Administratzailea') {
 		echo ('<a href="xmldeskargatu.php"><span id="act-sel" class="act-sel">Datu basea kudeatu<div class="arrow-right"></div></span></a>');
 		echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
 		echo ('<a href="erabErregistratu.php"><span id="act-sel" class="act-sel">Erabiltzaileak sartu<div class="arrow-right"></div></span></a>');
 	}else{
-		echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
+		echo ('<a href="kamerakIkusi.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
 	}
 		echo ('<a href="kontuaKudeatu.php"><span id="act-sel" class="act-sel">Kontua kudeatu<div class="arrow-right"></div></span></a>');
 	?>
