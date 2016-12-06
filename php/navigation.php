@@ -19,6 +19,7 @@
 			echo ('<a href="xmldeskargatu.php"><span id="act-sel" class="act-sel">Datu basea kudeatu<div class="arrow-right"></div></span></a>');
 			echo ('<a href="kamerakIkusi.php?eposta=admin"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
 			echo ('<a href="eskaerakKudeatu.php"><span id="act-sel" class="act-sel">Eskaerak ikusi<div class="arrow-right"></div></span></a>');
+			echo ('<a href="kamerakEsleitu.php"><span id="act-sel" class="act-sel">Kamerak esleitu<div class="arrow-right"></div></span></a>');
 		}else{
 			echo ('<a href="kamerakIkusi.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
 		}
