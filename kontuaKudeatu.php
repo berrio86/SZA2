@@ -2,16 +2,26 @@
 session_start();
 include 'php/header.php';
 ?>
+<script type="text/javascript" language="javascript">
+function editatu(){
+		if(confirm("Ziur al zaude zure datuak editatu nahi dituzula?")){
+			window.location.href= ("aldaketakGorde.php?izena="+document.getElementById('izena').value+"&pasahitza="+document.getElementById('pasahitza').value+"&eposta="+document.getElementById('eposta').value);
+		} else {
+			alert("Aldaketak ez dira gordeko.");
+		}
+	}
+</script>
 <?php
-echo('</head>
-		<body>');
+echo'</head>';
+echo'<body>';
 include 'php/navigation.php';
 ?>
 <section class="main" id="s1">
 		
 	
-	
+	<div>
 	<h1>Editatu ezazu zure kontua</h1>
+	</div>
 	<div id="edizioa">
 		<?php
 			$izena=$_SESSION['izena'];
@@ -28,7 +38,7 @@ include 'php/navigation.php';
 			}else{
 				$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
 		?>
-		<form id="logeatu" method="post" action="aldaketakGorde.php" enctype="multipart/form-data">
+		<!--<form id="logeatu" method="post" action="aldaketakGorde.php" enctype="multipart/form-data">-->
   			<h3>Posta-elektronikoa:</h3>
 			<?php 
 				echo'<input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly><br/><br/>';		
@@ -49,11 +59,12 @@ include 'php/navigation.php';
 			}
 			include 'dbkonexioak/dbClose.php';		
 		?>
-		<input type="submit" value="Aldaketak gorde" >
+		<input type="button" value="Aldaketak gorde" onclick="editatu();">
 			
-		</form>
+		<!--</form>-->
 		
 	</div>
+	
 
 	
 
