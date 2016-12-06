@@ -85,6 +85,22 @@ section {
   border-radius:10px;
 }
 
+#hasiera_mezua{
+	color: #111;
+	font-size:30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	line-height: 32px;
+	text-align:center;
+}
+
+.g-recaptcha{
+	width: 30%;
+	margin: auto;
+	text-align:center;
+}
+
+
 /*nabigazio menua*/
 
 nav	{
@@ -164,7 +180,7 @@ th:last-child {
   
 tr {
   border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
   color:#666B85;
   font-size:12px;
   font-weight:normal;

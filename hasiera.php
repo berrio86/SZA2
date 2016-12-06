@@ -9,8 +9,11 @@ include 'php/navigation.php';
 <section class="main" id="s1">
 		
 	
-	<div>
+	<div id="hasiera_mezua">
 	Ongi etorri web kameren aplikaziora!!
+	</div>
+	<div id="hasiera_irudia">
+	<img src="irudiak/88574.gif" alt="kamera gif" class="image-kamera"/>
 	</div>
 
 		
