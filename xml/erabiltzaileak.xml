@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE bisitak SYSTEM "bisita_liburua.dtd">
+<!DOCTYPE erabiltzaileak SYSTEM "Erabiltzaileak.dtd">
 <erabiltzaileak>
 	<erabiltzailea>
 		<eposta>jartomari@hotmail.com</eposta>
@@ -11,4 +11,4 @@
 		<izena>Julen</izena>
 		<pasahitza>123456</pasahitza>
 	</erabiltzailea>
-</erabiltzaileak>
+<erabiltzailea><eposta>iberriochoa001@ikasle.ehu.es</eposta><izena>Inaki</izena><pasahitza>123456</pasahitza></erabiltzailea><erabiltzailea><eposta>julen_mg@hotmail.com</eposta><izena>Julen</izena><pasahitza>123456</pasahitza></erabiltzailea></erabiltzaileak>
