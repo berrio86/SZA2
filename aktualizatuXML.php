@@ -32,18 +32,14 @@ $BL_FILE2='xml/kamerak.xml';
 	$kamerak = "SELECT * FROM Kamera" ;
 	$result = $db->query($kamerak);
 	while( $row = $result->fetch_array(MYSQLI_BOTH)) {		
-		$berria=$bl2->addChild('kamera');	// Sortu 'erabiltzailea' etiketa.
+		$berria=$bl2->addChild('kamera');	// Sortu 'kamera' etiketa.
 		$berria->addChild('ip',$row['IP']);
-		$berria->addChild('eposta',$row['Email']);	// Sortu 'erabiltzailea' etiketa barruko etiketak.
+		$berria->addChild('eposta',$row['Emaila']);	// Sortu 'kamera' etiketa barruko etiketak.
 	}
 	$bl2->asXML($BL_FILE2);	// Gorde aldaketak fitxategian.
 
 
 
 include "dbkonexioak/dbClose.php";
-
-//header('Content-Type: application/xml;');
-//header('Content-Disposition: attachment; filename=erabiltzaileak.xml;');
-//readfile('db/erabiltzaileak.xml');
 
 ?>
