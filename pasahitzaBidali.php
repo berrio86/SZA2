@@ -58,7 +58,7 @@
 						echo "error depurazio akatsa: ".mysqli_connect_error()."</br>";
 						
 					}
-					$emaitza = mysqli_query($db,"UPDATE erabiltzaileak SET Pasahitza='$berria' WHERE PostaElektronikoa='$eposta'"); 
+					$emaitza = mysqli_query($db,"UPDATE Erabiltzailea SET Pasahitza='$berria' WHERE Email='$eposta'"); 
 					echo "Dena ondo joan da, orain emaila bidaliko dizugu.</br>
 					  Denbora gutxi barru emailik jasotzen ez baduzu, saiatu zaitez berriro.";
 				}else{

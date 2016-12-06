@@ -1,6 +1,6 @@
 <div id='page-wrap'>
 	<header>
-		<a href="hasiera.php"><img class="logo" src="irudiak/quiz-logo.png" alt="Aplikazio logo" /></a>	
+		<a href="hasiera.php"><img class="logo" src="irudiak/logo.png" alt="Aplikazio logo" /></a>	
 		<a href="logout.php"><img title="Saioa amaitu" class="botoia"  src="irudiak/logout-icon.png" alt="Log out botoia"/></a>
 		<?php
 			if(empty($_SESSION['izena'])||empty($_SESSION['eposta'])||empty($_SESSION['erabiltzaileMota'])){
@@ -17,8 +17,8 @@
 		echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Hasiera<div class="arrow-right"></div></span></a>');
 		if($_SESSION['erabiltzaileMota'] == 'Administratzailea') {
 			echo ('<a href="xmldeskargatu.php"><span id="act-sel" class="act-sel">Datu basea kudeatu<div class="arrow-right"></div></span></a>');
-			echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
-			echo ('<a href="erabErregistratu.php"><span id="act-sel" class="act-sel">Erabiltzaileak sartu<div class="arrow-right"></div></span></a>');
+			echo ('<a href="kamerakIkusi.php?eposta=admin"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
+			echo ('<a href="eskaerakKudeatu.php"><span id="act-sel" class="act-sel">Eskaerak ikusi<div class="arrow-right"></div></span></a>');
 		}else{
 			echo ('<a href="kamerakIkusi.php"><span id="act-sel" class="act-sel">Kamerak ikusi<div class="arrow-right"></div></span></a>');
 		}
