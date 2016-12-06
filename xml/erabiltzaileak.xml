@@ -1,14 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE erabiltzaileak SYSTEM "Erabiltzaileak.dtd">
-<erabiltzaileak>
-	<erabiltzailea>
-		<eposta>jartomari@hotmail.com</eposta>
-		<izena>JartoMari</izena>
-		<pasahitza>123456</pasahitza>
-	</erabiltzailea>
-	<erabiltzailea>
-		<eposta>julenmg_12@hotmail.com</eposta>
-		<izena>Julen</izena>
-		<pasahitza>123456</pasahitza>
-	</erabiltzailea>
-<erabiltzailea><eposta>iberriochoa001@ikasle.ehu.es</eposta><izena>Inaki</izena><pasahitza>123456</pasahitza></erabiltzailea><erabiltzailea><eposta>julen_mg@hotmail.com</eposta><izena>Julen</izena><pasahitza>123456</pasahitza></erabiltzailea></erabiltzaileak>
+<erabiltzaileak> <erabiltzailea><eposta>iberriochoa001@ikasle.ehu.es</eposta><izena>Inaki</izena><pasahitza>123456</pasahitza></erabiltzailea><erabiltzailea><eposta>julen_mg@hotmail.com</eposta><izena>Julen</izena><pasahitza>123456</pasahitza></erabiltzailea></erabiltzaileak>

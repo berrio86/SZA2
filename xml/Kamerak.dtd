@@ -1,0 +1,5 @@
+<!ELEMENT kamerak (kamera)*>
+<!ELEMENT kamera (ip, eposta)>
+<!ELEMENT ip (#PCDATA)>
+<!ELEMENT eposta (#PCDATA)>
+
