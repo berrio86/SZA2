@@ -3,10 +3,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 28, 2016 at 06:13 PM
--- Server version: 10.0.20-MariaDB
--- PHP Version: 5.2.17
+-- Servidor: localhost
+-- Tiempo de generación: 06-12-2016 a las 22:38:10
+-- Versión del servidor: 10.0.20-MariaDB
+-- Versión de PHP: 5.2.17
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -18,47 +18,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `u911276192_sza`
+-- Base de datos: `u911276192_sza`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Administratzailea`
---
-
-CREATE TABLE IF NOT EXISTS `Administratzailea` (
-  `Emaila` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `Izena` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `Pasahitza` varchar(50) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`Emaila`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Erabiltzailea`
+-- Estructura de tabla para la tabla `Erabiltzailea`
 --
 
 CREATE TABLE IF NOT EXISTS `Erabiltzailea` (
-  `Emaila` varchar(50) NOT NULL,
-  `Izena` varchar(50) NOT NULL,
-  `Pasahitza` varchar(50) NOT NULL,
-  PRIMARY KEY (`Emaila`)
+  `Email` varchar(30) NOT NULL,
+  `Izena` varchar(30) NOT NULL,
+  `Pasahitza` varchar(30) NOT NULL,
+  `Mota` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `Erabiltzailea`
+-- Volcado de datos para la tabla `Erabiltzailea`
 --
 
-INSERT INTO `Erabiltzailea` (`Emaila`, `Izena`, `Pasahitza`) VALUES
-('iberriochoa001@ikasle.ehu.eus', 'Inaki Berriotxoa', '123456'),
-('julenmg_12@hotmail.com', 'Julen Merino', '123456');
+INSERT INTO `Erabiltzailea` (`Email`, `Izena`, `Pasahitza`, `Mota`) VALUES
+('iberriochoa001@ikasle.ehu.es', 'Inaki Berriotxoa Gabiria', '123456', 'Erabiltzailea'),
+('julen_mg@hotmail.com', 'Julen Merino', '123456', 'Erabiltzailea'),
+('webmaster@kamera.com', 'Web Master', '123456', 'Administratzailea');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Kamera`
+-- Estructura de tabla para la tabla `Kamera`
 --
 
 CREATE TABLE IF NOT EXISTS `Kamera` (
