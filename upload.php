@@ -23,7 +23,7 @@ $kamerasartu = "INSERT INTO Kamera VALUES ('$ip','$eposta')" ;
 $result = $db->query($kamerasartu);
 
   }
-//header("Location:xmldeskargatu.php");
+header("Location:xmldeskargatu.php");
 
 include "dbkonexioak/dbClose.php";
 ?>
