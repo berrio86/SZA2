@@ -29,7 +29,7 @@
 	</form>
 	<img src="irudiak/88568.gif" alt="kamera gif" class="image-kamera"/>
 </div>
-	<?php 
+<?php 
 
 if (isset($_POST['eposta'])){
 	include 'dbkonexioak/dbOpen.php';

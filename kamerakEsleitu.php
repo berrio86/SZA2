@@ -1,5 +1,5 @@
 <?php
-session_start();
+$_GET['orrialdea']="kamerakEsleitu";
 include 'php/header.php';
 ?>
 <script type="text/javascript">

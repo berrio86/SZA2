@@ -1,4 +1,5 @@
 <?php
+	$_GET['orrialdea']="pasahitzaberreskuratu";
 	include 'php/header.php';
 	echo('</head>');
 ?>

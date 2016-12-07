@@ -1,4 +1,5 @@
 <?php
+	$_GET['orrialdea']="pasahitzabidali";
 	include 'php/header.php';
 	echo('</head>');
 ?>

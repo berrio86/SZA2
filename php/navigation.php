@@ -2,9 +2,9 @@
 	<div id="header">
 		<a href="hasiera.php"><img class="logo" src="irudiak/logo.png" alt="Aplikazio logo" /></a>	
 		<a href="logout.php"><img title="Saioa amaitu" class="botoia"  src="irudiak/logout-icon.png" alt="Log out botoia"/></a>
+		<script src="js/orokorra.js"></script>
 		<?php
-			if(empty($_SESSION['izena'])||empty($_SESSION['eposta'])||empty($_SESSION['erabiltzaileMota'])){
-				$_SESSION['erabiltzaileMota']='Gonbidatua';
+			if($_SESSION['erabiltzaileMota'] == 'Gonbidatua'){
 				echo'<a href="#" class="datuak"><span><strong>Izena: </strong>Gonbidatua<br/><strong>Emaila: </strong>Ez dago logeatuta<br/><strong>Mota: </strong>Gonbidatua<br/></span></a>'; 
 			}else{
 				echo'<a href="#" class="datuak"><span><strong>Izena: </strong>'.$_SESSION['izena'].'<br/><strong>Emaila: </strong>'.$_SESSION['eposta'].'<br/><strong>Mota: </strong>'.$_SESSION['erabiltzaileMota'].'<br/></span></a>'; 

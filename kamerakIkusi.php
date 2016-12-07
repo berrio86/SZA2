@@ -1,16 +1,8 @@
 <?php
-session_start();
+$_GET['orrialdea']="kamerakIkusi";
 include 'php/header.php';
 ?>
-<script type="text/javascript">
-	function ezabatu(x){
-		alert(x);
-	}
-	
-	function ikusi(y){
-		alert(y);
-	}
-</script>
+
 <?php
 	echo'</head>';
 	echo'<body>';

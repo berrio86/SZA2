@@ -1,36 +1,7 @@
 <?php
-session_start();
+$_GET['orrialdea']="eskaerakKudeatu";
 include 'php/header.php';
 ?>
-	
-<script type="text/javascript" language="javascript">
-
-	//xhttp = new XMLHttpRequest();
-	
-	function ezabatu(x){
-		alert(x);
-		/*if(confirm("Ziur al zaude galdera hau ezabatu nahi duzula?")){
-			xhttp.onreadystatechange = function(){
-				if((xhttp.readyState==4) && (xhttp.status==200)){		
-					document.getElementById("taula").innerHTML=xhttp.responseText;
-				}	
-			}
-		xhttp.open("GET","galderaEzabatu.php?galderaZenb="+x, true);
-		xhttp.send();
-		}else{
-			alert("Galdera ez da ezabatua izango.");
-		}*/
-	}
-	
-	function ezabatu(){
-		alert("ezabatu!");
-	}
-	
-	function onartu(y){
-		alert (y);
-	}
-
-</script>
 
 <?php
 echo('</head>

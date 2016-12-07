@@ -1,5 +1,5 @@
 <?php
-session_start();
+$_GET['orrialdea']="ikusiErabiltzaileak";
 include 'php/header.php';
 //horrela jarrita dago javascript funtzioak sartu behar badira head atalean.
 ?><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

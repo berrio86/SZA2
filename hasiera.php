@@ -1,5 +1,5 @@
 <?php
-session_start();
+$_GET['orrialdea']="hasiera";
 include 'php/header.php';
 //horrela jarrita dago javascript funtzioak sartu behar badira head atalean.
 echo('</head>

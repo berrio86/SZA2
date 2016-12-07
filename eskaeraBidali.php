@@ -1,5 +1,5 @@
 <?php
-	
+	$_GET['orrialdea']="eskaerabidali";
 	include 'php/header.php';
 	echo('</head>
 		<body>');
