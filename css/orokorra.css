@@ -29,7 +29,7 @@ a{ text-decoration: none; }
 
 /*goiburua*/
 
-header {
+#header {
   position:absolute;
   height:14%;
   width:100%;
@@ -39,7 +39,7 @@ header {
   overflow: hidden;
 }
 
-header img.botoia { 
+#header img.botoia { 
   height: 90%;
   float:right;
   opacity:0.5;
@@ -60,7 +60,7 @@ header img.botoia {
 	margin-left: 10px;
 }
 
-header img.botoia:hover {
+#header img.botoia:hover {
   opacity:1.0;
 }
 
@@ -103,7 +103,7 @@ section {
 
 /*nabigazio menua*/
 
-nav	{
+#nav	{
   position:absolute;
   top:14%;
   left:0px;
@@ -115,7 +115,7 @@ nav	{
   overflow-x: hidden;
 }
 
-nav span:hover {
+#nav span:hover {
     color: black;
     background-color: grey;
 }
@@ -129,7 +129,7 @@ nav span:hover {
   float:right;
 }
 
-nav span {
+#nav span {
   margin: 0px 10px 0px 0px;
   width: 100%;
   display: inline-block;
