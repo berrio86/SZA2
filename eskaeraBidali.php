@@ -45,7 +45,7 @@
 					
 					//emaila bidali
 					$to      = 'iberriochoa001@ikasle.ehu.eus';
-					$subject = 'Pasahitz aldaketa';
+					$subject = 'Eskari berria';
 					$message = 'Kaixo administratzaile jauna,
 					Kamera aplikazioan eskari berri bat duzu. Prozesatu ezazu lehen bait lehen, mesedez.';
 								
