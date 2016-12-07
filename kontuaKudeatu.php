@@ -32,11 +32,11 @@ include 'php/navigation.php';
 		
   			<h3>Posta-elektronikoa:</h3>
 			<?php 
-				echo'<p><input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly="readonly"></p>';		
+				echo'<p><input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly="readonly"/></p>';		
 			?>		
 			<h3>Mota:</h3>
 			<?php 
-				echo'<p><input type="text" id="mota" name="mota"  title="Erabiltzaile mota" value="'.$mota.'" readonly="readonly"></p>';		
+				echo'<p><input type="text" id="mota" name="mota"  title="Erabiltzaile mota" value="'.$mota.'" readonly="readonly"/></p>';		
 			?>		
 			<h3>Izen-abizenak:</h3>	
 			<?php	

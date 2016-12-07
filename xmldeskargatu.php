@@ -21,8 +21,8 @@ include 'php/navigation.php';
 
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 	    <h3>Igo ezazu kamerak taula aktualizatzeko xml-a:</h3>
-	    <input type="file" name="fileToUpload" id="fileToUpload">
-	    <input type="submit" value="Upload XML" name="kamerak.xmligo">
+	    <input type="file" name="fileToUpload" id="fileToUpload"/>
+	    <input type="submit" value="Upload XML" name="kamerak.xmligo"/>
 	</form>
 	
 

@@ -1,18 +1,17 @@
 <?php
 session_start();
-if(!isset($_SESSION['erabiltzaileMota'])){
+if($_SESSION['erabiltzaileMota']=="Gonbidatua"){
 	echo 'Ez zaude logeatuta!';
 	header("Location:index.php");
 	exit;
 }elseif($_SESSION['erabiltzaileMota']=='Erabiltzailea'){
 	echo 'Erabiltzailea zara ez Administratzailea, beraz ezin duzu erabiltzaileak.xml deskargatu';
-	header("Location:index.php");
+	header("Location:hasiera.php");
 	exit;
 }elseif($_SESSION['erabiltzaileMota']=='Administratzailea'){
-
-header('Content-Type: application/xml;');
-header('Content-Disposition: attachment; filename=kamerak.xml;');
-readfile('db/kamerak.xml');
+	header('Content-Type: application/xml;');
+	header('Content-Disposition: attachment; filename=kamerak.xml;');
+	readfile('xml/kamerak.xml');
 }else{
 	header("Location:index.php");
 	exit;

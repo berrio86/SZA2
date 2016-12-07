@@ -17,7 +17,7 @@ include "dbkonexioak/dbOpen.php";
 
 		$kamerak = "SELECT * FROM Kamera" ;
 		$result = $db->query($kamerak);
-		echo '<table border=1><tr><th> IP </th><th> Emaila </th></tr>';
+		echo '<table><tr><th> IP </th><th> Emaila </th></tr>';
 		while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 			echo '<tr><td>'. $row['IP'].'</td> <td>'.$row['Emaila'].'</td></tr>';
 		}
@@ -25,7 +25,7 @@ include "dbkonexioak/dbOpen.php";
 		echo '<form id="ezabatu" method="post" action="ikusikamerak.php" enctype="multipart/form-data">';
 		echo '<div>';
   			echo '<h3>Sartu borratu nahi dezun kameraren IP-a:</h3>';
-  			echo '<input type="text" name="ip"/><br/>';
+  			echo '<p><input type="text" name="ip"/></p>';
 			echo '</div>';
 		echo '</form>';
 

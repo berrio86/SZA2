@@ -26,7 +26,7 @@ include "dbkonexioak/dbOpen.php";
 		echo '<form id="ezabatu" method="post" action="ikusierabiltzaileak.php" enctype="multipart/form-data">';
 		echo '<div>';
   			echo '<h3>Sartu borratu nahi dezun erabiltzailearen Posta-elektronikoa:</h3>';
-  			echo '<input type="text" name="eposta"/><br/>';
+  			echo '<p><input type="text" name="eposta"/></p>';
 			echo '</div>';
 		echo '</form>';
 
@@ -35,6 +35,8 @@ include "dbkonexioak/dbOpen.php";
 			$eposta= $_POST['eposta'];
 			$erabiltzaileaborratu = "DELETE FROM Erabiltzailea WHERE Email='$eposta'" ;
 			$result = $db->query($erabiltzaileaborratu);
+			$kameraborratu = "DELETE FROM Kamera WHERE Emaila='$eposta'" ;
+			$result = $db->query($kameraborratu);
 			header("Location:xmldeskargatu.php");
 		}
 	

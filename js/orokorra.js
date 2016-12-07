@@ -90,10 +90,12 @@ function ikusi(){
 
 function ezabatu(){
 	alert("hemen erabiltzailearen eskaria ezabatuko da!");
+	//alert(x);
 }
 	
 function onartu(){
 	alert ("hemen erabiltzailearen eskaria onartuko da!");
+	//alert(y);
 }
 
 

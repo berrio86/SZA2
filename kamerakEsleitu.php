@@ -13,10 +13,10 @@ include 'php/navigation.php';
 	
 	<div>
 	<form id="esleipena" name="esleipena" method="POST" action="" enctype="multipart/form-data">
-		 	<h2>Kamerak erabiltzaileei esleitu</h2><br/><br/>
-  			(*) IP helbidea:
+		 	<h2>Kamerak erabiltzaileei esleitu</h2>
+  			<p> IP helbidea:</p>
   			<p><input type="text" id="iphelbidea" name="iphelbidea" title="xxx.xxx.xxx.xxx" maxlenght="15"/></p>
-			(*) Posta Elektronikoa:
+			<p> Posta Elektronikoa: </p>
 			<p><select name="emaila">
 			<?php
 				include"dbkonexioak/dbOpen.php";

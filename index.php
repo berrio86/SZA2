@@ -34,23 +34,17 @@
 if (isset($_POST['eposta'])){
 	include 'dbkonexioak/dbOpen.php';
 	session_start();
-	if($_SERVER['REQUEST_METHOD'] == 'GET')  { //get eskaera landu
-			null;
-		} else { //post eskaera landu	
-			$eposta= $_POST['eposta'];
-			$pass= $_POST['pasahitza'];
-	}
+	
+	$eposta= $_POST['eposta'];
+	$pass= $_POST['pasahitza'];
+	
 		
 	$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Email='$eposta' AND Pasahitza='$pass'";
 	$emaitza = $db->query($erabiltzaileak); 
 	$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
 	
 	if(empty($lerroa)){
-		//errore mezuak sortu
-		/*$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-				<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-				<div class='error-page'>
-				<div class='try-again'>";*/
+		
 		$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 				<div class='error-page'>
 				<div class='try-again'>";
@@ -61,7 +55,7 @@ if (isset($_POST['eposta'])){
 			<script src='js/login.js'></script>";
 		
 		echo($hasiera."Pasahitza edo erabiltzaile izen okerra.</br>".$bukaera);
-		//echo"Pasahitza edo erabiltzaile izen okerra";
+		
 	}else{
 		$izena=$lerroa['Izena'];
 		$mota=$lerroa['Mota'];

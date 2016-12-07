@@ -26,10 +26,9 @@ include 'php/navigation.php';
 			echo ("<tr>");	
 				echo ("<td>".$lerroa['Izena']."</td>");
 				echo ("<td>".$lerroa['Email']."</td>");
-				//echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(".$lerroa['Email'].")'></td>");
-				//echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Editatu' onclick='onartu(".$lerroa['Email'].")'> </td>");
-				echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu();'></td>");
-				echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Onartu' onclick='onartu();'> </td>");
+				//echo'<p><input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly="readonly"/></p>';	
+				echo ('<td style="text-align:center"><input type="button" style="width:100%;" value="Ezabatu" onclick="ezabatu();"/></td>');
+				echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Onartu' onclick='onartu();'/> </td>");
 			echo("</tr>");
 		}
 		echo '</table>';
