@@ -8,7 +8,7 @@ include 'php/header.php';
 	echo'<body>';
 	include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	<div>
 	<?php
@@ -27,8 +27,8 @@ include 'php/header.php';
 		echo ("<td>".$lerroa['IP']."</td>");
 		echo ("<td>".$lerroa['Emaila']."</td>");
 		//echo "<option value='{$lerroa['Email']}'>{$lerroa['Email']}</option>";
-		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ikusi' onclick='ikusi({$lerroa['IP']});'></td>");
-		echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu({$lerroa['IP']});'> </td>");
+		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ikusi' onclick='ikusi();'></td>");
+		echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatuKamera();'> </td>");
 		echo ("</tr>");
 	}
 	echo("</table>");
@@ -37,6 +37,6 @@ include 'php/header.php';
 	
 	?>
 	</div>
-</section>
+</div>
 
 <?php include 'php/footer.php';?>

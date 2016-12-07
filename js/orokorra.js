@@ -1,3 +1,15 @@
+xhttp = new XMLHttpRequest();
+
+//kontua kudeatu
+function editatu(){
+	if(confirm("Ziur al zaude zure datuak editatu nahi dituzula?")){
+		window.location.href= ("aldaketakGorde.php?izena="+document.getElementById('izena').value+"&pasahitza="+document.getElementById('pasahitza').value+"&eposta="+document.getElementById('eposta').value);
+	} else {
+		alert("Aldaketak ez dira gordeko.");
+	}
+}
+
+//erregistro formularioa balidatzeko (martxan)
 function balidatu(f){
 	// Formularioko balioak irakurri
 	var izena = f.izena.value;
@@ -31,6 +43,7 @@ function balidatu(f){
 	return true;
 }
 	
+//pasahitzak berdinak direla frogatzeko (martxan)
 function pasahitzaBerdinak() {
 	var mezuak = document.getElementById("mezuak");
 	if(document.getElementById('pasahitza').value!=document.getElementById('pasahitza2').value) {
@@ -44,7 +57,8 @@ function pasahitzaBerdinak() {
 		document.getElementById("botoia").disabled=false;
 	}
 }
-	
+
+//emailaren formatua egokia dela ziurtatzeko (martxan)
 function helbide_formatua(helbidea){
 	// Ziurtatu '@' karakterea behin, eta behin bakarrik, agertzen dela.
 	if(helbidea.split("@").length != 2)
@@ -64,52 +78,33 @@ function helbide_formatua(helbidea){
 
 
 //frogak
-/*
-function ezabatu(x){
-	alert(x);
+
+function ezabatuKamera(){
+	alert("hemen kamera ezabatuko da!!");
 }
-	
-function ikusi(y){
-	alert(y);
+
+function ikusi(){
+	alert("hemen kamera ikusteko lehiora eramango gaitu!");
 }
 
 
 function ezabatu(){
-	alert("ezabatu!");
+	alert("hemen erabiltzailearen eskaria ezabatuko da!");
 }
 	
-function onartu(y){
-	alert (y);
+function onartu(){
+	alert ("hemen erabiltzailearen eskaria onartuko da!");
 }
-*/
-//pasahitza berreskuratzeko
 
+
+
+//pasahitza berreskuratzeko google kaptcha (martxan)
 function recaptchaFrogatu(){
 	document.getElementById("botoia").disabled=false;
 }
 		
-/*function helbide_formatua(){
-	var helbidea = document.getElementById("eposta");
-	// Ziurtatu '@' karakterea behin, eta behin bakarrik, agertzen dela.
-	if(helbidea.split("@").length != 2)
-		return false;
-	// Ziurtatu '@' karakterea ez dela lehena.
-	if(helbidea.indexOf("@") == 0)
-		return false;
-	// Ziurtatu '@' karakterearen ondoren '.' karaktereren bat badagoela.
-	if(helbidea.lastIndexOf(".") < helbidea.lastIndexOf("@"))
-		return false;
-	// Ziurtatu azkeneko puntuaren atzetik gutxienez beste 2 karaktere daudela.
-	if(helbidea.lastIndexOf(".") + 2 > helbidea.length - 1)
-		return false;
-	
-	return true;
-}*/	
 
 //kamerak esleitu (martxan)
-
-xhttp = new XMLHttpRequest();
-		
 function gorde(ip,email){
 	xhttp.onreadystatechange = function(){
 		if((xhttp.readyState==4) && (xhttp.status==200)){
@@ -122,24 +117,13 @@ function gorde(ip,email){
 	xhttp.send();
 }
 	
-/*function koloreaAldatu(x){
-	var div = document.getElementById("mezuak");
-	var mezua = x.split(" ");
-	alert(mezua[0]);
-	if (mezua[0].compare("Akats")){
-		div.style.color="darkred";
-		div.style.backgroundColor="coral";
-	}else{
-		div.style.color="darkgreen";
-		div.style.backgroundColor="chartreuse";
-	}
-}*/
+
 	
+//kamera esleipenerako (martxan)
 function IpFormatua(f){	
 	var ip = f.iphelbidea.value;
 	var eposta = f.emaila.value;
 	var emaitza=true;
-	alert(ip);
 	
 	//beteta dagoela ziurtatu
 	if(ip==""){

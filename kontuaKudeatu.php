@@ -2,21 +2,12 @@
 $_GET['orrialdea']="kontuakKudeatu";
 include 'php/header.php';
 ?>
-<script type="text/javascript" language="javascript">
-function editatu(){
-		if(confirm("Ziur al zaude zure datuak editatu nahi dituzula?")){
-			window.location.href= ("aldaketakGorde.php?izena="+document.getElementById('izena').value+"&pasahitza="+document.getElementById('pasahitza').value+"&eposta="+document.getElementById('eposta').value);
-		} else {
-			alert("Aldaketak ez dira gordeko.");
-		}
-	}
-</script>
 <?php
 echo'</head>';
 echo'<body>';
 include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	
 	<div>
@@ -38,30 +29,30 @@ include 'php/navigation.php';
 			}else{
 				$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
 		?>
-		<!--<form id="logeatu" method="post" action="aldaketakGorde.php" enctype="multipart/form-data">-->
+		
   			<h3>Posta-elektronikoa:</h3>
 			<?php 
-				echo'<input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly><br/><br/>';		
+				echo'<p><input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly="readonly"></p>';		
 			?>		
 			<h3>Mota:</h3>
 			<?php 
-				echo'<input type="text" id="mota" name="mota"  title="Erabiltzaile mota" value="'.$mota.'" readonly><br/><br/>';		
+				echo'<p><input type="text" id="mota" name="mota"  title="Erabiltzaile mota" value="'.$mota.'" readonly="readonly"></p>';		
 			?>		
 			<h3>Izen-abizenak:</h3>	
 			<?php	
-				echo'<input type="text" id="izena" name="izena" title="Izen abizenak" value="'.$izena.'"><br/><br/>';	
+				echo'<p><input type="text" id="izena" name="izena" title="Izen abizenak" value="'.$izena.'"/></p>';	
 			?>
 			<h3>Pasahitza:</h3>
 			<?php
-				echo'<input type="text" id="pasahitza" name="pasahitza" title="Pasahitza" value="'.$lerroa['Pasahitza'].'"><br/><br/>';	
+				echo'<p><input type="text" id="pasahitza" name="pasahitza" title="Pasahitza" value="'.$lerroa['Pasahitza'].'"/></p>';	
 			?>
   			<?php
 			}
 			include 'dbkonexioak/dbClose.php';		
 		?>
-		<input type="button" value="Aldaketak gorde" onclick="editatu();">
+		<p><input type="button" value="Aldaketak gorde" onclick="editatu();"/></p>
 			
-		<!--</form>-->
+		
 		
 	</div>
 	
@@ -69,5 +60,5 @@ include 'php/navigation.php';
 	
 
 		
-</section>
+</div>
 <?php include 'php/footer.php';?>
