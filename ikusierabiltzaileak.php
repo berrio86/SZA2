@@ -20,7 +20,7 @@ $("table tr").click( function () {
 		<body><?php
 include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	
 	<div>
@@ -30,7 +30,7 @@ include "dbkonexioak/dbOpen.php";
 
 		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Mota='Erabiltzailea'" ;
 		$result = $db->query($erabiltzaileak);
-		echo '<table id ="table" border=1><tr><th> Email </th><th> Izena </th></tr>';
+		echo '<table id ="table"><tr><th> Email </th><th> Izena </th></tr>';
 		while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 			echo '<tr><td>'. $row['Email'].'</td> <td>'.$row['Izena'].'</td></tr>';
 		}
@@ -56,6 +56,6 @@ include "dbkonexioak/dbOpen.php";
 	</div>
 
 		
-</section>
+</div>
 
 <?php include 'php/footer.php';?>

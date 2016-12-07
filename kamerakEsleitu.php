@@ -15,9 +15,9 @@ include 'php/navigation.php';
 	<form id="esleipena" name="esleipena" method="POST" action="" enctype="multipart/form-data">
 		 	<h2>Kamerak erabiltzaileei esleitu</h2><br/><br/>
   			(*) IP helbidea:
-  			<input type="text" id="iphelbidea" name="iphelbidea" title="xxx.xxx.xxx.xxx" maxlenght="15"><br/><br/>
+  			<p><input type="text" id="iphelbidea" name="iphelbidea" title="xxx.xxx.xxx.xxx" maxlenght="15"/></p>
 			(*) Posta Elektronikoa:
-			<select name="emaila">
+			<p><select name="emaila">
 			<?php
 				include"dbkonexioak/dbOpen.php";
 				$galdera="SELECT Email FROM Erabiltzailea";
@@ -27,10 +27,10 @@ include 'php/navigation.php';
 				}
 				include "dbkonexioak/dbClose.php";
 			?>
-			</select><br/><br/>
+			</select></p>
  			
 			
-		 	<input id="botoia" type="button" name="button" value="Bidali" onclick="IpFormatua(this.form);">
+		 	<p><input id="botoia" type="button" name="button" value="Bidali" onclick="IpFormatua(this.form);"/></p>
 	 </form> 
 	</div>
 	<div id = "mezuak">

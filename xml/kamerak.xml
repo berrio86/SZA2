@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE kamerak SYSTEM "Kamerak.dtd">
-<kamerak> <kamera><ip>127.255.255.254</ip><eposta>julen_mg@hotmail.com</eposta></kamera><kamera><ip>123.234.123.54</ip><eposta>julen_mg@hotmail.com</eposta></kamera></kamerak>
+<kamerak> <kamera><ip>127.255.255.254</ip><eposta>julen_mg@hotmail.com</eposta></kamera><kamera><ip>123.234.123.54</ip><eposta>julen_mg@hotmail.com</eposta></kamera><kamera><ip>192.3.4.1</ip><eposta>iberriochoa001@ikasle.ehu.es</eposta></kamera><kamera><ip>123.234.345.456</ip><eposta>julen_mg@hotmail.com</eposta></kamera><kamera><ip>1.1.1.1</ip><eposta>webmaster@kamera.com</eposta></kamera></kamerak>
