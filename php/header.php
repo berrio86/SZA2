@@ -16,7 +16,7 @@
 
     //Gonbidatua bada, gonbidatua sar daitekeen orrietara sartu daitekeela bermatu
 	if($_SESSION['erabiltzaileMota'] == "Gonbidatua"){
-	if($_GET['orrialdea'] != "index" && $_GET['orrialdea'] != "erregistratu" && $_GET['orrialdea'] != "pasahitzaberreskuratu"){
+	if($_GET['orrialdea'] != "index" && $_GET['orrialdea'] != "erregistratu" && $_GET['orrialdea'] != "pasahitzaberreskuratu" && $_GET['orrialdea'] != "eskaerabidali"){
 		
 			header("Location:index.php");
 		}
@@ -29,3 +29,4 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Web kamera</title>
 <link rel="stylesheet" type="text/css" href="css/orokorra.css"/>
+<script src="js/orokorra.js"></script>
