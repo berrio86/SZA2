@@ -20,12 +20,13 @@ b{font: 16px Georgia, serif;}
 a{ text-decoration: none; }
 
 #page-wrap				{margin: 0 auto; color: white;}
-#page-wrap >.main 	{ 
-  padding: 0;
-  margin-bottom: 0; 
-  color: black;
-  overflow-y: auto;
+
+p{
+	margin:5px;
 }
+
+
+
 
 /*goiburua*/
 
@@ -66,10 +67,10 @@ a{ text-decoration: none; }
 
 /*gorputza*/
 
-section > div				{padding: 20px;}
+#section > div				{padding: 20px;}
 
 
-section {
+#section {
   position: absolute;
   right:0px;
   top:14%;
@@ -83,6 +84,7 @@ section {
   border: solid;
   border-width: 1px 1px 1px 1px;
   border-radius:10px;
+  color: black;
 }
 
 #hasiera_mezua{
@@ -99,6 +101,8 @@ section {
 	margin: auto;
 	text-align:center;
 }
+
+
 
 
 /*nabigazio menua*/
@@ -260,7 +264,8 @@ td.text-right {
 
 /*footerra*/
 
-footer {
+#footer {
+  color: black;
   clear: both; 
   display: block;
   position: absolute;
@@ -272,7 +277,7 @@ footer {
   vertical-align: middle;
 }
 
-footer img {
+#footer img {
   height:80%;
   opacity:0.5;
   padding-right:16px;
@@ -280,6 +285,6 @@ footer img {
   margin: 5px 5px 5px 5px;
 }
 
-footer img:hover {
+#footer img:hover {
    opacity: 1.0;
 }

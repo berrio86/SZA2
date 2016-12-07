@@ -6,17 +6,17 @@ echo('</head>
 		<body>');
 include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	
 	<div id="hasiera_mezua">
-	Ongi etorri web kameren aplikaziora!!
+	<p>Ongi etorri web kameren aplikaziora!!</p>
 	</div>
 	<div id="hasiera_irudia">
 	<img src="irudiak/88574.gif" alt="kamera gif" class="image-kamera"/>
 	</div>
 
 		
-</section>
+</div>
 
 <?php include 'php/footer.php';?>

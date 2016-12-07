@@ -8,7 +8,7 @@ echo('</head>
 		<body>');
 include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	
 	<div >
@@ -28,8 +28,8 @@ include 'php/navigation.php';
 				echo ("<td>".$lerroa['Email']."</td>");
 				//echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(".$lerroa['Email'].")'></td>");
 				//echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Editatu' onclick='onartu(".$lerroa['Email'].")'> </td>");
-				echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(".$lerroa['Email'].")'></td>");
-				echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Onartu' onclick='onartu(".$lerroa['Email'].")'> </td>");
+				echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu();'></td>");
+				echo ("<td style='text-align:center'> <input name='editatu' type='button' style='width:100%;' value='Onartu' onclick='onartu();'> </td>");
 			echo("</tr>");
 		}
 		echo '</table>';
@@ -39,6 +39,6 @@ include 'php/navigation.php';
 	
 
 		
-</section>
+</div>
 
 <?php include 'php/footer.php';?>

@@ -6,7 +6,7 @@ echo('</head>
 		<body>');
 include 'php/navigation.php';
 ?>
-<section class="main" id="s1">
+<div id="section">
 		
 	
 	<div>
@@ -29,6 +29,6 @@ include 'php/navigation.php';
 	</div>
 
 		
-</section>
+</div>
 
 <?php include 'php/footer.php';?>
