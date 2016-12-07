@@ -8,14 +8,13 @@
 	include 'php/navigation.php';
 ?>
 <?php
-	echo "blablabla";
 	if (isset($_POST['eposta'])){
 		
 		$eposta=$_POST['eposta'];
         $captcha=$_POST['g-recaptcha-response'];
 	
 		echo $eposta;
-		/*include 'dbkonexioak/dbOpen.php';
+		include 'dbkonexioak/dbOpen.php';
 			
 		
         
@@ -69,7 +68,7 @@
         	
 		}
 		
-			include 'dbkonexioak/dbClose.php';*/
+			include 'dbkonexioak/dbClose.php';
 		
 	}
 	
