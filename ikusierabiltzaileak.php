@@ -2,22 +2,10 @@
 $_GET['orrialdea']="ikusiErabiltzaileak";
 include 'php/header.php';
 //horrela jarrita dago javascript funtzioak sartu behar badira head atalean.
-?><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-
-$(document).ready(function(){
-$("table tr").click( function () {
-	$(this).addClass('selected').siblings().removeClass('selected');
-	var eposta=$(this).find("td:first").html();
-	var izena=$(this).find("td:last").html();
-	var id= $(this).text();
-        alert(id);
-        } );
-});
-</script>
+?>
 
 </head>
-		<body><?php
+<body><?php
 include 'php/navigation.php';
 ?>
 <div id="section">
