@@ -17,13 +17,13 @@
 		$pass= $_POST['pasahitza'];
 		
 		
-
+		//datu basera galdeketa egin
 		$emaitza = mysqli_query($db,"SELECT * FROM Erabiltzailea WHERE Email='$eposta'"); //ikusi ea erabiltzailea existitzen den
 		if (mysqli_num_rows($emaitza) > 0) {
 			echo "<div>Dagoeneko existitzen da $eposta duen erabiltzaile bat. Mesedez, sartu ezazu beste posta-elektroniko helbide bat.</div> </br></br>";
 		} else { //ez da erabiltzailerik aurkitu email horrekin
 
-			//ikusi ea REGEXP pasatzen duen
+			//ikusi ea REGEXP pasatzen duen FILTROAK!!!
 			$esp_izena= filter_var($izena, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/([A-Z]{1}[a-z ]{1,})*/")));
 			$esp_mota = filter_var($mota, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^(Erabiltzailea|Administratzailea)$/")));
 			$esp_email= filter_var($eposta, FILTER_VALIDATE_EMAIL); 
@@ -67,6 +67,7 @@
 				}
 				
 			}else{
+				//filtroetan akatsak badaude akatsa pantailaratu
 				echo "Datuak jasotzean errorea(k):</br>";
 				if($esp_izena==false)
 					echo "- Izena letra larriz hasi behar da eta ondoren letra xehez jarraitu. </br>"; 

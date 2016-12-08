@@ -3,6 +3,7 @@
 		<a href="hasiera.php"><img class="logo" src="irudiak/logo.png" alt="Aplikazio logo" /></a>	
 		<a href="logout.php"><img title="Saioa amaitu" class="botoia"  src="irudiak/logout-icon.png" alt="Log out botoia"/></a>
 		<?php
+			//goi ezkerraldeko erabiltzaile datuak ezarri
 			if($_SESSION['erabiltzaileMota'] == 'Gonbidatua'){
 				echo'<a href="#" class="datuak"><span><strong>Izena: </strong>Gonbidatua<br/><strong>Emaila: </strong>Ez dago logeatuta<br/><strong>Mota: </strong>Gonbidatua<br/></span></a>'; 
 			}else{
@@ -12,6 +13,7 @@
     </div>
 	<div id="nav">
 	<?php
+	//erabiltzaile motaren arabera menu atal batzuk erakutsi edo beste batzuk
 	if($_SESSION['erabiltzaileMota'] == 'Administratzailea'||$_SESSION['erabiltzaileMota'] == 'Erabiltzailea'){
 		echo ('<a href="hasiera.php"><span id="act-sel" class="act-sel">Hasiera<div class="arrow-right"></div></span></a>');
 		if($_SESSION['erabiltzaileMota'] == 'Administratzailea') {

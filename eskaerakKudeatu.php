@@ -14,10 +14,11 @@ include 'php/navigation.php';
 	<div >
 		<?php 
 		include 'dbkonexioak/dbOpen.php';
-
+		//datu basean galdeketa egin
 		$erabiltzaileak = "SELECT * FROM ErabiltzaileBerria";
 		$emaitza = $db->query($erabiltzaileak); 
 		
+		//beharrezko taula sortu datu baseko elementuekin
 		echo '<table><tr><th> ERABILTZAILE IZENA </th><th> POSTA </th><th> EZABATU </th><th> ONARTU </th></tr>';
 
 		while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){

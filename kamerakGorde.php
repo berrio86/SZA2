@@ -15,6 +15,7 @@ if (isset($_GET['iphelbidea'])){
 		echo $eposta." duen erabiltzaileari ".$ip." IP-dun kamera esleitu zaio</br>";
 		echo "Datu baseko sarrera egoki egin da.";
 	}else{
+		//akatsen ba badago, mezua pantailaratu
 		echo "Akats bat egon da datu basera sarrera egitean.</br>";
 		echo "Ezin izan da $ip IP helbidea duen kamera $eposta duen erabiltzaileari esleitu.</br>";
 		echo "Begiratu ea datu basean IP zenbaki bereko kamerarik dagoen.";

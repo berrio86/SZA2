@@ -38,25 +38,28 @@ if (isset($_POST['eposta'])){
 	$eposta= $_POST['eposta'];
 	$pass= $_POST['pasahitza'];
 	
-		
+	//datu basera galdeketa egin	
 	$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Email='$eposta' AND Pasahitza='$pass'";
 	$emaitza = $db->query($erabiltzaileak); 
 	$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
 	
+	//erantzuna hutsa al den frogatu
 	if(empty($lerroa)){
-		
+		//errore stringa sortu JQuery inportatu
 		$hasiera="<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 				<div class='error-page'>
 				<div class='try-again'>";
 	
+		//errore stringaren amaiera sortu eta script bati erreferentzia gehitu bukaeran
 		$bukaera="Errorea: Saiatu berriro?
 				</div>
 			</div>
 			<script src='js/login.js'></script>";
-		
+		//errorea pantailaratu
 		echo($hasiera."Pasahitza edo erabiltzaile izen okerra.</br>".$bukaera);
 		
 	}else{
+		//dena ondo badoa saio aldagaiei beharrezko balioak eman
 		$izena=$lerroa['Izena'];
 		$mota=$lerroa['Mota'];
 		

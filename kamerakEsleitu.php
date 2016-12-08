@@ -19,6 +19,7 @@ include 'php/navigation.php';
 			<p> Posta Elektronikoa: </p>
 			<p><select name="emaila">
 			<?php
+				//option motako elementuetan erabiltzaileak sartu
 				include"dbkonexioak/dbOpen.php";
 				$galdera="SELECT Email FROM Erabiltzailea";
 				$emaitza = $db->query($galdera); 

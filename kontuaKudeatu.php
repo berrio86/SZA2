@@ -21,7 +21,7 @@ include 'php/navigation.php';
 		
 			include 'dbkonexioak/dbOpen.php';
 			
-		
+			//datu baseari galdeketa egin
 			$sqlekintza="SELECT Pasahitza FROM Erabiltzailea WHERE Email='$eposta'" ;
 			$emaitza=$db->query($sqlekintza);
 			if(!$emaitza) {
@@ -32,6 +32,7 @@ include 'php/navigation.php';
 		
   			<h3>Posta-elektronikoa:</h3>
 			<?php 
+				//datu baseko datuekin eremuak bete
 				echo'<p><input type="text" id="eposta" name="eposta"  title="Zure posta elektronikoa" value="'.$eposta.'" readonly="readonly"/></p>';		
 			?>		
 			<h3>Mota:</h3>
