@@ -1,5 +1,6 @@
 <?php
 session_start();
+//Ziurtatu erabiltzailea Administratzailea motakoa dela
 if($_SESSION['erabiltzaileMota']=="Gonbidatua"){
 	echo 'Ez zaude logeatuta!';
 	header("Location:index.php");
@@ -9,6 +10,7 @@ if($_SESSION['erabiltzaileMota']=="Gonbidatua"){
 	header("Location:hasiera.php");
 	exit;
 }elseif($_SESSION['erabiltzaileMota']=='Administratzailea'){
+	//Xml dokumentua deskargatzeko aginduak
 	header('Content-Type: application/xml;');
 	header('Content-Disposition: attachment; filename=erabiltzaileak.xml;');
 	readfile('xml/erabiltzaileak.xml');

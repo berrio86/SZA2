@@ -15,8 +15,9 @@ include 'php/navigation.php';
 	<?php
 
 include "dbkonexioak/dbOpen.php";
-
-		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Mota='Erabiltzailea'" ;
+	
+		//Erabiltzailea taulatik erabiltzaile direnak aukeratu eta taula batean erakutsi
+		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Mota='Erabiltzailea'" ; 
 		$result = $db->query($erabiltzaileak);
 		echo '<table id ="table"><tr><th> Email </th><th> Izena </th></tr>';
 		while( $row = $result->fetch_array(MYSQLI_BOTH)) {
@@ -33,9 +34,9 @@ include "dbkonexioak/dbOpen.php";
 
 		if (isset($_POST['eposta'])){
 			$eposta= $_POST['eposta'];
-			$erabiltzaileaborratu = "DELETE FROM Erabiltzailea WHERE Email='$eposta'" ;
+			$erabiltzaileaborratu = "DELETE FROM Erabiltzailea WHERE Email='$eposta'" ; //Sartutako eposta borratzeko sql agindua
 			$result = $db->query($erabiltzaileaborratu);
-			$kameraborratu = "DELETE FROM Kamera WHERE Emaila='$eposta'" ;
+			$kameraborratu = "DELETE FROM Kamera WHERE Emaila='$eposta'" ; //kameraren bat eleituta bazeukan ere Kamera taulatik borratu
 			$result = $db->query($kameraborratu);
 			header("Location:xmldeskargatu.php");
 		}

@@ -2,9 +2,9 @@
 include "dbkonexioak/dbOpen.php";
 
 
-$BL_FILE='xml/erabiltzaileak.xml';
+$BL_FILE='xml/erabiltzaileak.xml'; //.xml berriaren izena, aurrekoaren berdina da berri hau gainezartzeko
 
-
+		//.xml berria sortu
 		$bl=new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE erabiltzaileak SYSTEM "Erabiltzaileak.dtd"> <erabiltzaileak> </erabiltzaileak>');
 	if(!$bl)
 		return false;
@@ -21,9 +21,9 @@ $BL_FILE='xml/erabiltzaileak.xml';
 	$bl->asXML($BL_FILE);	// Gorde aldaketak fitxategian.
 
 
-$BL_FILE2='xml/kamerak.xml';
+$BL_FILE2='xml/kamerak.xml'; //.xml berriaren izena, aurrekoaren berdina da berri hau gainezartzeko
 
-
+		//.xml berria sortu
 		$bl2=new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE kamerak SYSTEM "Kamerak.dtd"> <kamerak> </kamerak>');
 	if(!$bl2)
 		return false;

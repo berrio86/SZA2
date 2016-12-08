@@ -15,6 +15,7 @@ include 'php/navigation.php';
 
 include "dbkonexioak/dbOpen.php";
 
+		//kamera taulan dauden datuak hartu eta taula batean erakutsi
 		$kamerak = "SELECT * FROM Kamera" ;
 		$result = $db->query($kamerak);
 		echo '<table><tr><th> IP </th><th> Emaila </th></tr>';
@@ -32,7 +33,7 @@ include "dbkonexioak/dbOpen.php";
 
 		if (isset($_POST['ip'])){
 			$ip= $_POST['ip'];
-			$kameraborratu = "DELETE FROM Kamera WHERE IP='$ip'" ;
+			$kameraborratu = "DELETE FROM Kamera WHERE IP='$ip'" ; //Kamera taulatik borratu
 			$result = $db->query($kameraborratu);
 			header("Location:xmldeskargatu.php");
 		}
