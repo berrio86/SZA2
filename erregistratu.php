@@ -12,7 +12,7 @@ include 'php/navigation.php';
 		
 	<div>
 	 <form id="erregistro" method="post" action="eskaeraBidali.php" enctype="multipart/form-data">
-		 	<h2>Erregistratu erabiltzaileak</h2>
+		 	<h2>Egin erregistratzeko eskaria</h2>
   			 <p>Erabiltzaile izena:</p>
   			<p><input type="text" id="izena" name="izena" title="Idatzi zure erabiltzaile izena"/></p>
 			 <p>Posta Elektronikoa:</p>

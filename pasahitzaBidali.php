@@ -13,19 +13,19 @@
 		$eposta=$_POST['eposta'];
         $captcha=$_POST['g-recaptcha-response'];
 	
-		echo $eposta;
+		echo '<div id="section">';
 		include 'dbkonexioak/dbOpen.php';
 			
 		
         
-		$secretKey = "6LerogsUAAAAAHiIYXlWy9QM40UIUnppNhiXi_Dq";
+		$secretKey = "6LcbKg4UAAAAAEhKvo4Sv8T6Z03NTP1Fk596ARVC";
         $ip = $_SERVER['REMOTE_ADDR'];
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
         $responseKeys = json_decode($response,true);
         	
 		//emaila datu basean dagoen begiratu
 		$erabiltzaileak = "SELECT * FROM Erabiltzailea WHERE Email='$eposta'";
-		echo "$emaitza = $db->query($erabiltzaileak)"; 
+		$emaitza = $db->query($erabiltzaileak); 
 		$lerroa = $emaitza->fetch_array(MYSQLI_BOTH);
 	
 		if(empty($lerroa)){
@@ -42,8 +42,11 @@
     		$berria=implode($pass); //$pass array-a string bat bihurtu
 			
 			//emaila bidali
-			echo $eposta.'<br>';
-			echo $berria.'<br>';
+			echo "<p>Mezu hau frogak egiteko jarrita dago. Emailak batzutan iristen tardatzen baitu.</p>";
+			echo "<p>Gogoratu mail funtzioak ez duela lokalean funtzionatzen!!</p>";
+			echo "<p>Zure eposta helbidea:".$eposta."</p>";
+			echo "<p>Zure pasahitz berria:".$berria."</p>";
+		
 				
 				
 			$to      = $eposta;
@@ -58,10 +61,10 @@
 					//aldaketak datu basean sartu
 					
 					$emaitza = mysqli_query($db,"UPDATE Erabiltzailea SET Pasahitza='$berria' WHERE Email='$eposta'"); 
-					echo "<div>Dena ondo joan da, orain emaila bidaliko dizugu.</br>
-					  Denbora gutxi barru emailik jasotzen ez baduzu, saiatu zaitez berriro.</div>";
+					echo "<div><p>Dena ondo joan da, orain emaila bidaliko dizugu.</p>
+					  <p>Denbora gutxi barru emailik jasotzen ez baduzu, saiatu zaitez berriro.</p></div>";
 				}else{
-					echo "<div>Errore bat egon da emaila bidaltzean.</div>";
+					echo "<p>Errore bat egon da emaila bidaltzean.</p>";
 				}
 			
 				
@@ -69,7 +72,7 @@
 		}
 		
 			include 'dbkonexioak/dbClose.php';
-		
+		echo '</div>';
 	}
 	
 ?>

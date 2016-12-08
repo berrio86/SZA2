@@ -9,7 +9,7 @@
 <?php 
 	include 'dbkonexioak/dbOpen.php';
 		
-	echo '<section class="main" id="s1">';
+	echo '<div id="section">';
 
 		$izena= $_POST['izena'];
 		$mota = "Erabiltzailea";
@@ -81,7 +81,7 @@
 		}
 		
 	
-	echo'</section>';
+	echo'</div>';
 	include 'dbkonexioak/dbClose.php';
 ?>
 <?php include 'php/footer.php'; ?>
